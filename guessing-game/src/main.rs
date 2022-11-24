@@ -1,12 +1,12 @@
-use rand::Rng;
-
+mod random;
 mod input;
 mod output;
 
 fn main() {
-    let target = rand::thread_rng().gen_range(1..101);
+    let target = random::generate_target_from_range(1, 5000);
+
     println!("Welcome to the guessing game!");
-    println!("The secret number is between 1 and 100.");
+    println!("The secret number is between {} and {}.", start, end);
 
     loop {
         let guess = input::get_guess_from_user();
